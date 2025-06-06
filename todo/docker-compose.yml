@@ -1,9 +1,15 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: todo_server_1
+      APP_PORT: 5173
+      PROXY_AUTH_ADD: "false"
+
   app:
     image: carlosfallen/todo:v2.0.2
-    restart: unless-stopped
+    restart: on-failure
     environment:
       - NODE_ENV=production  # Ambiente de produção
     ports:
@@ -12,9 +18,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}:/app/data  # Armazenamento persistente (CRÍTICO)
       - ${UMBREL_ROOT}/data/storage:/storage  # Acesso a arquivos do Umbrel (opcional)
-    networks:
-      - umbrel_main_network  # Rede padrão do Umbrel
-
-networks:
-  umbrel_main_network:
-    external: true
+    ports:
+      - 5173:5173
+      - 3001:3001
