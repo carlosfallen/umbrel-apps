@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ghostfolio
 category: finance
 name: Ghostfolio
-version: "2.156.0"
+version: "2.166.0"
 tagline: Manage your wealth like a boss
 description: >-
   Ghostfolio is a privacy-first, open source dashboard for your personal finances.
@@ -32,18 +32,9 @@ deterministicPassword: false
 torOnly: false
 releaseNotes: >-
   This release includes the following improvements:
-    - Improved currency code validation (uppercase required) and error messages
-    - Respected watcher count for delete asset profiles
-    - Enhanced French localization
-    - Upgraded ngx-skeleton-loader and Nx versions
-    - Fixed investment calculation in custom currencies
-    - Improved file import to accept case-insensitive extensions
-    - Fixed missing localization for "someone" on the public page
-    - Added watchlist API endpoints (DELETE, GET, POST)
-    - Simplified data source checks in DTOs
-    - Renamed Subscription schema field (User → user)
-    - Migrated UI components to control flow
-    - Fixed settings dialog for X-ray page thresholds
+    - Added support to create custom tags in the create or update activity dialog
+    - Improved the style of card components and system messages
+    - Improved language localization for German, Spanish, Turkish, and Ukrainian
 
 
   Full release notes are found at https://github.com/ghostfolio/ghostfolio/releases

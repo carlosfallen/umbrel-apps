@@ -3,7 +3,7 @@ id: grafana
 name: Grafana
 tagline: The open-source platform for monitoring and observability
 category: networking
-version: "11.6.1"
+version: "12.0.1"
 port: 3030
 description: >-
   Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data-driven culture:
@@ -36,11 +36,16 @@ gallery:
   - 2.jpg
   - 3.jpg
 releaseNotes: >-
-  This minor release includes bug fixes and enhancements:
-    - Added support for cloud partners Prometheus data sources
-    - Improved handling of interactive tooltips
-    - Fixed issues with LDAP testing and org redirection
-    - Addressed several security vulnerabilities
+  ⚠️ Major version upgrades may include breaking changes affecting features, APIs, plugins, and integrations.
+
+
+  This release includes bug fixes and enhancements:
+    - Fixed issues with Panel Explore link subpath duplication
+    - Improved handling of row repeats in dashboards
+    - Enhanced template variable interpolation for Graphite and InfluxDB
+    - Restored link to Metrics Drilldown from Explore
+    - Fixed scroll behavior in NestedFolderPicker
+    - Improved performance and stability across various components
 
 
   Full release notes are available at https://github.com/grafana/grafana/releases
